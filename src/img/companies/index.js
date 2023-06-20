@@ -1,0 +1,6 @@
+export const AppleTv = require('./appletv.png')
+export const DisneyPlus = require('./disneyplus.png')
+export const MyCanal = require('./mycanal.png')
+export const Netflix = require('./netflixlogo.jpeg')
+export const ParamountPlus = require('./paramountplus.png')
+export const PrimeVideo = require('./primeVideo.png')
