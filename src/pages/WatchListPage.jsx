@@ -29,11 +29,11 @@ export default function WatchListPage() {
     return(
         <>
         <SearchBar />
-        <div className="h-screen w-screen text-white ">
-            <div className="h-full bg-cover bg-center flex items-start" style={{backgroundImage: "url('"+ bgImage +"'"}}>
+        <div className="h-fit w-screen text-white bg-[#09161d]">
+            <div className="min-h-screen bg-cover bg-center flex items-start" style={{backgroundImage: "url('"+ bgImage +"'"}}>
                 
-                <div className="w-full h-full bg-gradient-to-t from-[#09161d] from-30%  to-[#09161d]/0 absolute z-10"></div>
-                <div className="flex flex-col z-30 m-28 gap-4">
+                <div className="w-full h-full bg-gradient-to-t from-[#09161d] from-30%  to-[#09161d]/0 fixed z-10"></div>
+                <div className="flex flex-col z-30 m-28 gap-4 h-fit">
                     <h1 className='font-apple font-bold text-4xl text-start'>WatchList</h1>                    
                     <div className='flex flex-wrap flex-row gap-6'>
                         {

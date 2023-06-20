@@ -8,6 +8,8 @@ import React, { useState, useEffect } from 'react';
 import {
     useParams
 } from "react-router-dom";
+import { LuConstruction } from 'react-icons/lu';
+
 
 export default function HomePage() {
 
@@ -54,7 +56,7 @@ export default function HomePage() {
             <Header item={headerItem[0]}/>
             {
                 items.map((row) => {
-                    switch(row.type) {
+                    switch(row.type.toLowerCase()) {
                         case("horizontal"):
                             return (<HorizontalRow key={row._id} items={ row.elements } title={ row.title }/>)
                         case ("vertical"):
@@ -65,6 +67,16 @@ export default function HomePage() {
                             return(<div key={row.id}></div>)
                     }                
                 })
+            }
+            {
+                items.length < 1 ?
+                    <>
+                        <LuConstruction className='text-yellow-600 w-full text-8xl mb-10'/>
+                        <h1 className='text-yellow-400 font-zuume font-bold text-5xl'>Page Under Construction</h1>
+                        <p className='text-white text-xl'>This Page is actually under construction, waiting for content</p>
+                    </>
+                    :
+                    <></>
             }
         </div>
         </>
