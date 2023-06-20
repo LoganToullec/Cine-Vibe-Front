@@ -36,20 +36,20 @@ export default function AdminPage() {
         
         <SearchBar/>
         <div className="w-screen h-screen flex items-center justify-center px-10 pt-20 pb-5 bg-center bg-cover" style={{backgroundImage: "url('" + bgImage + "'"}}>
-            <div className="w-full h-full bg-red-800 rounded-3xl flex flex-row">
-                <div className=' w-[300px] bg-blue-600 rounded-2xl m-5 flex flex-col gap-2 overflow-scroll justify-start items-start p-3'>
+            <div className="w-full h-full rounded-3xl flex flex-row">
+                <div className=' w-[300px] bg-black/60 backdrop-blur-xl rounded-2xl m-5 flex flex-col gap-2 overflow-scroll justify-start items-start p-3'>
                     <p className='text-white font-bold text-3xl pb-4'>Tables</p>
-                    <div className='bg-red-600 w-full text-start p-2 rounded-xl cursor-pointer' onClick={ () => setSelectedMenu(Menus.movies) }>
+                    <div className='bg-black w-full text-start p-2 rounded-xl cursor-pointer' onClick={ () => setSelectedMenu(Menus.movies) }>
                         <p className='text-white font-bold text-xl'>Movies</p>
                     </div>
-                    <div className='bg-red-600 w-full text-start p-2 rounded-xl cursor-pointer' onClick={ () => setSelectedMenu(Menus.rows) }>
+                    <div className='bg-black w-full text-start p-2 rounded-xl cursor-pointer' onClick={ () => setSelectedMenu(Menus.rows) }>
                         <p className='text-white font-bold text-xl'>Rows</p>
                     </div>
-                    <div className='bg-red-600 w-full text-start p-2 rounded-xl cursor-pointer' onClick={ () => setSelectedMenu(Menus.pages) }>
+                    <div className='bg-black w-full text-start p-2 rounded-xl cursor-pointer' onClick={ () => setSelectedMenu(Menus.pages) }>
                         <p className='text-white font-bold text-xl'>Pages</p>
                     </div>
                 </div>
-                <div className='w-full bg-blue-600 rounded-2xl m-5 flex flex-col overflow-scroll'>
+                <div className='w-full bg-black/60 backdrop-blur-xl rounded-2xl m-5 flex flex-col overflow-scroll px-5'>
                     {
                         renderPage()
                     }
